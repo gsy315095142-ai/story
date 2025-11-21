@@ -9,12 +9,9 @@ export const generateStorySegment = async (
   userPrompt: string,
   targetWordCount: number
 ): Promise<string> => {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
-    throw new Error("API Key is missing. Please check your environment settings.");
-  }
-
-  const ai = new GoogleGenAI({ apiKey });
+  // Fix: Use process.env.API_KEY directly in initialization as per guidelines.
+  // Note: process.env.API_KEY is replaced by string literal during build via vite config.
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
   // Context Construction
   // 1. Global Book Context
