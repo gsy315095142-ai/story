@@ -1,0 +1,5 @@
+{
+  "name": "NovelCraft AI",
+  "description": "A professional novel writing assistant powered by Gemini. Define your world, track your chapters, and generate context-aware story continuations.",
+  "requestFramePermissions": []
+}
